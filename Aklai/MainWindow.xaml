@@ -8,7 +8,7 @@
         Title="Aklai" Height="450" Width="800">
     <Grid>
         <Frame
-            x:Name="Frame" NavigationUIVisibility="Hidden"
+            x:Name="frame" NavigationUIVisibility="Hidden"
         />
 
     </Grid>

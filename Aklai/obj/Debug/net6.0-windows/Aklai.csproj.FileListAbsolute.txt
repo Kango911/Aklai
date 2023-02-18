@@ -19,3 +19,5 @@ D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\refint\Aklai.dll
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.pdb
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.genruntimeconfig.cache
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\ref\Aklai.dll
+D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\login.g.cs
+D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\regin.g.cs

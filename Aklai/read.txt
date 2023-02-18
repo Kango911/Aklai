@@ -1,3 +1,10 @@
 ﻿DESKTOP-TDHC1KG\Users
 
 Server=DESKTOP-TDHC1KG\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+
+https://you-hands.ru/2018/08/31/wpf-sistema-avtorizacii-i-registracii/
+https://you-hands.ru/2018/08/31/wpf-vypolnenie-zaprosov-k-baze-dannyx-ms-sql-server/
+https://you-hands.ru/2018/08/31/wpf-podklyuchenie-k-baze-dannyx-ms-sql-server/
+
+https://github.com/Kango911/Aklai

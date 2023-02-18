@@ -26,7 +26,8 @@ namespace Aklai
             
             DataTable dt_user = Select("SELECT * FROM [dbo].[users]"); // получаем данные из таблицы
 
-            for(int i = 0; i < dt_user.Rows.Count; i ++) { // перебираем данные
+            for(int i = 0; i < dt_user.Rows.Count; i ++) // перебираем данные
+            { 
                 MessageBox.Show(dt_user.Rows[i][0] + "|" + dt_user.Rows[i][1]); // выводим данные
             }
         }
@@ -42,6 +43,7 @@ namespace Aklai
             sqlCommand.CommandText = selectSQL; // присваиваем команде текст
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand); // создаём обработчик
             sqlDataAdapter.Fill(dataTable); // возращаем таблицу с результатом
+            
             return dataTable;
         }
     }

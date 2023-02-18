@@ -7,11 +7,6 @@
       mc:Ignorable="d"
       Title="regin" Height="450" Width="800">
     <Grid>
-        <Label Content="Введите логин:" HorizontalAlignment="Center" Margin="311,144,389,249"/>
-        <TextBox x:Name="Login" HorizontalAlignment="Center" Height="24" Margin="311, 170, 281, 255"/>
-        <Label Content="Введите пароль:" HorizontalAlignment="Center" Margin="311,199,380,194"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="24" Margin="311, 200, 281, 176"/>
-        <Button x:Name="regin" Click="regin_Click" Content="Регистрация" HorizontalContentAlignment="Center" Margin="405, 255, 281, 176"/>
-        <Button x:Name="enter" Click="enter_Click" Content="Войти" HorizontalContentAlignment="Center" Margin="311, 255, 400, 176"/>
+
     </Grid>
 </Page>

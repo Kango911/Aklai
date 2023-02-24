@@ -23,7 +23,7 @@ namespace Aklai
         //Регистрация
         private void reg_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox_login.Text.Length >; 0) // проверяем логин
+            if (textBox_login.Text.Length > 0) // проверяем логин
             {
                 string[] dataLogin = textBox_login.Text.Split('@'); // делим строку на две части
                 if (dataLogin.Length == 2) // проверяем если у нас две части
@@ -36,9 +36,9 @@ namespace Aklai
                 } else MessageBox.Show("Укажите логин в форме х@x.x");
                 
                 
-                if (password.Password.Length >; 0) // проверяем пароль
+                if (password.Password.Length > 0) // проверяем пароль
                 {
-                    if (password.Password.Length >;= 6)
+                    if (password.Password.Length >= 6)
                     {
                         bool en = true; // английская раскладка
                         bool symbol = false; // символ
@@ -46,8 +46,8 @@ namespace Aklai
 
                         for(int i=0; i<password.Password.Length; i ++) // перебираем символы
                         {
-                            if (password.Password[i] >;= 'А' && password.Password[i] <= 'Я') en = false; // если русская раскладка
-                            if (password.Password[i] >;= '0' && password.Password[i] <= '9') number = true; // если цифры
+                            if (password.Password[i] >= 'А' && password.Password[i] <= 'Я') en = false; // если русская раскладка
+                            if (password.Password[i] >= '0' && password.Password[i] <= '9') number = true; // если цифры
                             if (password.Password[i] == '_' || password.Password[i] == '-' || password.Password[i] == '!') symbol = true; // если символ
                         }
 
@@ -62,7 +62,7 @@ namespace Aklai
                         }
                     } else MessageBox.Show("пароль слишком короткий, минимум 6 символов");
                     
-                    if (password_Copy.Password.Length >; 0) // проверяем второй пароль
+                    if (password_Copy.Password.Length > 0) // проверяем второй пароль
                     {
                         if (password.Password == password_Copy.Password) // проверка на совпадение паролей
                         {

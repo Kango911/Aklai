@@ -12,6 +12,6 @@
         <Label Content="Введите пароль:" HorizontalAlignment="Center" Margin="311,199,380,194"/>
         <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="24" Margin="311, 200, 281, 176"/>
         <Label Content="Повторите пароль:" HorizontalAlignment="Center" Margin="311,230,380,194" />
-        <PasswordBox x:Name="password_Copy" HorizontalAlignment="Center" Height="24" Margin="311,144,389,249"/>
+        <PasswordBox x:Name="password_Copy" HorizontalAlignment="Center" Height="24" Margin="311,250,389,249"/>
     </Grid>    
 </Page>

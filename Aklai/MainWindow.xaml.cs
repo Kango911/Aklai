@@ -35,7 +35,7 @@ namespace Aklai
         }
 
 
-        void OpenPages(pages pages)
+        public void OpenPage(pages pages)
         {
             if (pages == pages.login)
             {

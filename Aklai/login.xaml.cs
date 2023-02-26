@@ -11,7 +11,7 @@ namespace Aklai
         {
             InitializeComponent();
 
-            mainWidow = _mainWindow;
+            mainWindow = _mainWindow;
         }
 
         // функция входа 

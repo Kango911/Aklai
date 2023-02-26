@@ -11,7 +11,9 @@
         <TextBox x:Name="textBox_login" HorizontalAlignment="Center" Height="24" Margin="311, 170, 281, 255"/>
         <Label Content="Введите пароль:" HorizontalAlignment="Center" Margin="311,199,380,194"/>
         <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="24" Margin="311, 200, 281, 176"/>
-        <Label Content="Повторите пароль:" HorizontalAlignment="Center" Margin="311,230,380,194" />
-        <PasswordBox x:Name="password_Copy" HorizontalAlignment="Center" Height="24" Margin="311,250,389,249"/>
+        <Label Content="Повторите пароль:" HorizontalAlignment="Center" Margin="311,240,370,184" />
+        <PasswordBox x:Name="password_Copy" HorizontalAlignment="Center" Height="24" Margin="311, 270, 281, 176"/>
+        <Button x:Name="reg" Click="reg_Click" Content="Регистрация" HorizontalContentAlignment="Center" Margin="405, 305, 281, 125"/>
+        <Button x:Name="back" Click="back_Click" Content="Отмена" HorizontalContentAlignment="Center" Margin="311, 305, 400, 125"/>
     </Grid>    
 </Page>

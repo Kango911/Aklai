@@ -73,13 +73,5 @@ namespace Aklai
                 } else MessageBox.Show("Укажите пароль");
             } else MessageBox.Show("Укажите логин");
         }
-        
-        
-        
-
     }
-    
-    
-    
-
 }

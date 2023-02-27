@@ -67,6 +67,7 @@ namespace Aklai
                         if (password.Password == password_Copy.Password) // проверка на совпадение паролей
                         {
                             MessageBox.Show("Пользователь зарегистрирован");
+                            mainWindow.OpenPage(MainWindow.pages.profil); // открываем страницу профиль
                         }else MessageBox.Show("Пароли не совподают");
 
                     } else MessageBox.Show("Повторите пароль");

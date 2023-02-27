@@ -23,3 +23,5 @@ D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\login.g.cs
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\regin.g.cs
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\login.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\regin.baml
+D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\profil.g.cs
+D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\profil.baml

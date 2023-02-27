@@ -8,5 +8,12 @@
       <jdbc-url>Server=DESKTOP-TDHC1KG\SQLEXPRESS;Database=Users</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="cnmdgcki@kashin.db.elephantsql.com" uuid="9839a358-176e-4b18-852c-bfaf0411b598">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://kashin.db.elephantsql.com:5432/cnmdgcki</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

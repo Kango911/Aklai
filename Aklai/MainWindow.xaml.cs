@@ -31,7 +31,8 @@ namespace Aklai
         public enum pages
         {
             login,
-            regin
+            regin,
+            profil
         }
 
 

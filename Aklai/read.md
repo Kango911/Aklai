@@ -33,5 +33,7 @@ https://it-black.ru/rabota-s-bazoj-dannyh-v-ci_sharp/
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+`Host=kashin.db.elephantsql.com; Username=cnmdgcki; Password=YEp_z36TiQMoE0Hb1Kfo_rNxmM0ly5OM; Database=cnmdgcki`
+
 https://smart-lab.ru/q/bonds/SU26215RMFS2/
 https://smart-lab.ru/q/bonds/SU26215RMFS2/

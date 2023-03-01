@@ -30,3 +30,8 @@ back_Click - КНОПКА ОТМЕНА | готово
 https://metanit.com/sharp/mvc/5.2.php
 https://learn.microsoft.com/ru-ru/azure/azure-sql/database/connect-query-dotnet-visual-studio?view=azuresql
 https://it-black.ru/rabota-s-bazoj-dannyh-v-ci_sharp/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://smart-lab.ru/q/bonds/SU26215RMFS2/
+https://smart-lab.ru/q/bonds/SU26215RMFS2/

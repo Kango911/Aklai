@@ -8,34 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ApplicationDefinition Include="Pages\App.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </ApplicationDefinition>
+      <Compile Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.AssemblyInfo.cs" />
     </ItemGroup>
 
     <ItemGroup>
-      <Page Update="files\profil.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
-      <Page Update="files\MainWindow.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
-      <Page Update="files\login.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
-      <Page Update="files\regin.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
+      <Content Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.AssemblyInfoInputs.cache" />
+      <Content Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.assets.cache" />
+      <Content Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" />
     </ItemGroup>
 
 </Project>

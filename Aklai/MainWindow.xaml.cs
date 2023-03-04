@@ -55,7 +55,7 @@ namespace Aklai
                 new SqlConnection(@"server=DESKTOP-TDHC1KG\SQLEXPRESS;Trusted_Connection=Yes;DataBase=Users;");
             sqlConnection.Open(); // открываем базу данных
             SqlCommand sqlCommand = sqlConnection.CreateCommand(); // создаём команду
-            sqlCommand.CommandText = selectSQL; // присваиваем команде текст
+            sqlCommand.CommandText = selectSQL; // присваиваем команде текст 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand); // создаём обработчик
             sqlDataAdapter.Fill(dataTable); // возращаем таблицу с результатом
             

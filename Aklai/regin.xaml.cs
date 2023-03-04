@@ -23,7 +23,7 @@ namespace Aklai
         //Регистрация
         private void reg_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox_login.Text.Length > 0) // проверяем логин
+            if (textBox_login.Text.Length > 0) // проверяем верность логина
             {
                 string[] dataLogin = textBox_login.Text.Split('@'); // делим строку на две части
                 if (dataLogin.Length == 2) // проверяем если у нас две части

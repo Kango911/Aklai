@@ -1,6 +1,9 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Aklai.Data;
 using Npgsql;
 
 namespace Aklai
@@ -18,18 +21,26 @@ namespace Aklai
         // функция входа 
         private void enter_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox_login.Text.Length > 0) // проверяем введён ли логин     
+            if (textBox_login.Text.Length <= 0)
             {
-                if (password.Password.Length > 0) // проверяем введён ли пароль         
-                {             // ищем в базе данных пользователя с такими данными         
-                    NpgsqlDataReader dt_user = mainWindow.Select($"SELECT * FROM \"public\".\"Users\" AS u WHERE u.\"login\"='{textBox_login.Text}' AND u.\"password\"='{password.Password}'");
-                    if (dt_user.HasRows) // если такая запись существует       
-                    {
-                        MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался  
-                        mainWindow.OpenPage(MainWindow.pages.profil); // открываем страницу профиль 
-                    } else MessageBox.Show("Пользователя не найден"); // выводим ошибку  
-                } else MessageBox.Show("Введите пароль"); // выводим ошибку    
-            } else MessageBox.Show("Введите логин"); // выводим ошибку 
+                MessageBox.Show("Введите логин");
+                return;
+            }
+            if (password.Password.Length <= 0)     
+            {
+                MessageBox.Show("Введите пароль");
+                return;
+            }
+
+            var db = new DBHelper();
+            
+            if (db.CanAuth(textBox_login.Text, password.Password).Result is false)   
+            {
+                MessageBox.Show("Пользователя не найден");
+                return;
+            }
+            MessageBox.Show("Пользователь авторизовался");
+            mainWindow.OpenPage(MainWindow.pages.profil);
         }
 
         // функция открытия регистрации 

@@ -54,7 +54,7 @@ namespace Aklai
 
         public NpgsqlDataReader Select(string selectSQL) // функция подключения к базе данных и обработка запросов
         {
-            Npgsql.NpgsqlConnection connection = new NpgsqlConnection(@"Host=kashin.db.elephantsql.com; Username=cnmdgcki; Password=YEp_z36TiQMoE0Hb1Kfo_rNxmM0ly5OM; Database=cnmdgcki");
+            Npgsql.NpgsqlConnection connection = new NpgsqlConnection(@"");
             connection.Open();
             NpgsqlCommand command = connection.CreateCommand();
             command.CommandText = selectSQL;

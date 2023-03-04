@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace Aklai;
+namespace Aklai.Pages;
 
 public partial class profil : Page
 {

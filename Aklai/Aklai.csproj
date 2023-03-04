@@ -9,7 +9,11 @@
 
     <ItemGroup>
       <None Remove="Images\Signature.png" />
-      <Resource Include="Images\Signature.png" />
+      <None Remove="Images\Signature (1).png" />
+      <None Remove="Images\Logo1.png" />
+      <Resource Include="Images\Logo1.png" />
+      <None Remove="Images\Logo2.png" />
+      <Resource Include="Images\Logo2.png" />
     </ItemGroup>
 
 </Project>

@@ -8,13 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.AssemblyInfo.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.AssemblyInfoInputs.cache" />
-      <Content Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.assets.cache" />
-      <Content Include="obj\Debug\net6.0-windows\Aklai_2dj4ygnd_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" />
+      <None Remove="Images\Signature.png" />
+      <Resource Include="Images\Signature.png" />
     </ItemGroup>
 
 </Project>

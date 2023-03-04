@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+lT+VaBjRaoHTQr7atCw8hL7LrFK/ohXnt3YPd8REl2BOO3pKp8AfPmxmqH+WvM53K2+ZYoKDOQZ6CW9JWrGcw==",
+  "dgSpecHash": "zZ8ERb7SGA5/hpxLHfeDcpWxczk4Zf7MMgClFwhwggiW6uzQhDscD4609A2jGYQRGgScTLpuGvrdwQTvM3m89A==",
   "success": true,
-  "projectFilePath": "D:\\JetBrains\\Aklai\\Aklai\\Aklai.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Projects\\Aklai\\Aklai\\Aklai.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Confucius\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Confucius\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Confucius\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Confucius\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

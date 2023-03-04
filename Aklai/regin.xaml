@@ -6,14 +6,17 @@
       xmlns:local="clr-namespace:Aklai"
       mc:Ignorable="d"
       Title="regin" Height="450" Width="800">
-    <Grid>
-        <Label Content="Введите логин в форме почты:" HorizontalAlignment="Center" Margin="311,144,300,249"/>
-        <TextBox x:Name="textBox_login" HorizontalAlignment="Center" Height="24" Margin="311, 170, 281, 255"/>
-        <Label Content="Введите пароль:" HorizontalAlignment="Center" Margin="311,199,380,194"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Center" Height="24" Margin="311, 200, 281, 176"/>
-        <Label Content="Повторите пароль:" HorizontalAlignment="Center" Margin="311,240,370,184" />
-        <PasswordBox x:Name="password_Copy" HorizontalAlignment="Center" Height="24" Margin="311, 270, 281, 176"/>
-        <Button x:Name="reg" Click="reg_Click" Content="Регистрация" HorizontalContentAlignment="Center" Margin="405, 305, 281, 125"/>
-        <Button x:Name="back" Click="back_Click" Content="Отмена" HorizontalContentAlignment="Center" Margin="311, 305, 400, 125"/>
-    </Grid>    
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Label Content="Введите логин в форме почты:" Margin="4"/>
+        <TextBox x:Name="textBox_login" Height="19" Margin="4"/>
+        <Label Content="Введите пароль:" Margin="4"/>
+        <PasswordBox x:Name="password" Height="19" Margin="4"/>
+        <Label Content="Повторите пароль:" Margin="4" />
+        <PasswordBox x:Name="password_Copy" Height="19" Margin="4"/>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="reg" Click="reg_Click" Content="Регистрация" Width="100" Margin="4"/>
+            <Button x:Name="back" Click="back_Click" Content="Отмена" Width="100" Margin="4"/>
+        </StackPanel>
+    </StackPanel>
+    
 </Page>

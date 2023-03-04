@@ -7,4 +7,9 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="Images\Signature.png" />
+      <Resource Include="Images\Signature.png" />
+    </ItemGroup>
+
 </Project>

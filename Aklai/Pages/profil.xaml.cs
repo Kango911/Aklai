@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Aklai.Pages;
 
@@ -11,5 +12,10 @@ public partial class profil : Page
         InitializeComponent();
         
         mainWindow = _mainWindow;
+    }
+    
+    private void ex_Click(object sender, RoutedEventArgs e) 
+    {     
+        mainWindow.OpenPage(MainWindow.pages.login); 
     }
 }

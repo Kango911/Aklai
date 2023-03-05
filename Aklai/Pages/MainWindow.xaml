@@ -10,6 +10,6 @@
         <Frame
             x:Name="frame" NavigationUIVisibility="Hidden"
         />
-
+        
     </Grid>
 </Window>

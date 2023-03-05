@@ -14,6 +14,5 @@
         <Button x:Name="regin" Click="regin_Click" Content="Регистрация" HorizontalContentAlignment="Center" Margin="405, 255, 281, 176"/>
         <Button x:Name="enter" Click="enter_Click" Content="Войти" HorizontalContentAlignment="Center" Margin="311, 255, 400, 176"/>
         <Image Source="Images/Signature.png" Width="150" Height="125" HorizontalAlignment="Right" VerticalAlignment="Top" />
-
     </Grid>
 </Page>

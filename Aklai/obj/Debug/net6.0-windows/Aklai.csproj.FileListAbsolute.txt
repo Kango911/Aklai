@@ -62,3 +62,11 @@ C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.csproj.CopyComplete
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Npgsql.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\Npgsql.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.csproj.CopyComplete

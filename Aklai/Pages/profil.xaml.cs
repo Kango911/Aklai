@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using Aklai.FIlters;
 
 namespace Aklai.Pages;
 
@@ -14,8 +15,9 @@ public partial class profil : Page
         mainWindow = _mainWindow;
     }
     
-    private void ex_Click(object sender, RoutedEventArgs e) 
+    private void ex_Click(object sender, RoutedEventArgs e)
     {     
-        mainWindow.OpenPage(MainWindow.pages.login); 
+        mainWindow.OpenPage(MainWindow.pages.login);
+        Session.CloseSession();
     }
 }

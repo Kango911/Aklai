@@ -27,9 +27,9 @@
                 <GridView>
                     <GridViewColumn Header="Тип" Width="150" DisplayMemberBinding="{Binding type}"/>
                     <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="Номинал" Width="120" DisplayMemberBinding="{Binding dataOfBirth}"/>
+                    <GridViewColumn Header="Номинал" Width="120" DisplayMemberBinding="{Binding nome}"/>
                     <GridViewColumn Header="Дата погашения" Width="100" DisplayMemberBinding="{Binding age}"/>
-                    <GridViewColumn Header="НКД" Width="100" DisplayMemberBinding="{Binding gender}"/>
+                    <GridViewColumn Header="НКД" Width="100" DisplayMemberBinding="{Binding nkd}"/>
                 </GridView>
             </ListView.View>
         </ListView>

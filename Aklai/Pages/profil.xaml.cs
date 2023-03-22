@@ -64,10 +64,10 @@ public partial class profil : Page
         List<Sort> newSort = new List<Sort>();
         newSort = sort;
     
-        if (genderFilter.SelectedIndex == 0)
-            newSort = sort.FindAll(x => x.type == "M");
+        if (typeFilter.SelectedIndex == 0)
+            newSort = sort.FindAll(x => x.type == "Акции");
         else
-            newSort = sort.FindAll(x => x.type == "F");
+            newSort = sort.FindAll(x => x.type == "Облигации");
     
         LoadSort(newSort);
         newSort = newSort.FindAll(x => x.name.Contains(nameFilter.Text));

@@ -551,8 +551,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lipen\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lipen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -563,9 +562,6 @@
       "packagesPath": "C:\\Users\\lipen\\.nuget\\packages\\",
       "outputPath": "D:\\JetBrains\\Aklai\\Aklai\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\lipen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",

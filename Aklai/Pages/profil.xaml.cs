@@ -65,9 +65,9 @@ public partial class profil : Page
         newSort = sort;
     
         if (typeFilter.SelectedIndex == 0)
-            newSort = sort.FindAll(x => x.type == "Акции");
+            newSort = sort.FindAll(x => x.type == "Акция");
         else
-            newSort = sort.FindAll(x => x.type == "Облигации");
+            newSort = sort.FindAll(x => x.type == "Облигация");
     
         LoadSort(newSort);
         newSort = newSort.FindAll(x => x.name.Contains(nameFilter.Text));

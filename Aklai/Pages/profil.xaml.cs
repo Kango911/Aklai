@@ -7,11 +7,11 @@ namespace Aklai.Pages;
 public partial class profil : Page
 {
     public MainWindow mainWindow;
-    
+
     public profil(MainWindow _mainWindow)
     {
         InitializeComponent();
-        
+
         mainWindow = _mainWindow;
     }
     
@@ -20,4 +20,5 @@ public partial class profil : Page
         mainWindow.OpenPage(MainWindow.pages.login);
         Session.CloseSession();
     }
+    
 }

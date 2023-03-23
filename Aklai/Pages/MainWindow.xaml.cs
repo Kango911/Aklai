@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
+using Aklai.FIlters;
 using Aklai.Pages;
 using Npgsql;
 
@@ -23,6 +24,13 @@ namespace Aklai
 {
     public partial class MainWindow : Window
     {
+        public static Session session;
+
+        public Session Session
+        {
+            get { return session; }
+            set { session = Session; }
+        }
         public MainWindow()
         {
             InitializeComponent();

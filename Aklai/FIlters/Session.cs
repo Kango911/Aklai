@@ -2,12 +2,32 @@
 
 public class Session
 {
-    private string Login;
+    private int id;
+    private string login;
+    private static bool sessionValid; // = false??
 
-    private bool SessionValid
+    public string Login
     {
-        get { return SessionValid; }
-        set { SessionValid = CloseSession(); }
+        get
+        {
+            return login;
+        }
+        private set
+        {
+            login = Login;
+        }
+    }
+
+    public static bool SessionValid
+    {
+        get
+        {
+            return sessionValid;
+        }
+        set
+        {
+            sessionValid = SessionValid;
+        }
     }
 
     public Session(string login)
@@ -16,8 +36,13 @@ public class Session
         SessionValid = true;
     }
 
-    static public bool CloseSession()
+    public string GetCurrentSession()
     {
-        return false;
+        return Login;
+    }
+
+    static public void CloseSession()
+    {
+        SessionValid = false;
     }
 }

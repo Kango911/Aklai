@@ -23,7 +23,6 @@ C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\MainWindow.g.cs
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\profil.g.cs
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\regin.g.cs
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\App.g.cs
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai_Content.g.cs
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai_MarkupCompile.cache
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai_MarkupCompile.lref
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.dll
@@ -52,7 +51,6 @@ C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.csproj.CopyComplete
-C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Npgsql.dll
 D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\Npgsql.dll
 D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\System.Data.SqlClient.dll

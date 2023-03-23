@@ -41,10 +41,12 @@ namespace Aklai
                 return;
             }
             MessageBox.Show("Пользователь авторизовался");
-            
-            StartSession(textBox_login.Text);
-            
+
             mainWindow.OpenPage(MainWindow.pages.profil);
+            
+            Session currentSession = new Session(textBox_login.Text);
+            MainWindow.session = currentSession;
+            
         }
 
         // функция открытия регистрации 

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using Aklai.Data;
+using Aklai.Filters;
 using Npgsql;
 
 namespace Aklai
@@ -41,6 +42,10 @@ namespace Aklai
             }
             MessageBox.Show("Пользователь авторизовался");
             mainWindow.OpenPage(MainWindow.pages.profil);
+            
+            Session currentSession = new Session();
+            MainWindow.session = currentSession;
+            
         }
 
         // функция открытия регистрации 

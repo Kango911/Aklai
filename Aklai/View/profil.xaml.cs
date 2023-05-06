@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using Aklai.Filters;
 
 
 namespace Aklai.Pages;
@@ -23,9 +24,10 @@ public partial class profil : Page
         LoadSort(sort); // выводим данные на экран
     }
     
-    private void ex_Click(object sender, RoutedEventArgs e) 
+    private void Exite_Click(object sender, RoutedEventArgs e) 
     {     
         mainWindow.OpenPage(MainWindow.pages.login); 
+        Session.CloseSession();
     }
 
     public class Sort

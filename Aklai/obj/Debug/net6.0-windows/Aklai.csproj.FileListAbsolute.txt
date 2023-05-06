@@ -18,12 +18,7 @@ D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.pdb
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.genruntimeconfig.cache
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\ref\Aklai.dll
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.csproj.AssemblyReference.cache
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\login.g.cs
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\MainWindow.g.cs
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\profil.g.cs
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\regin.g.cs
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\App.g.cs
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai_Content.g.cs
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai_MarkupCompile.cache
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai_MarkupCompile.lref
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.dll
@@ -34,10 +29,6 @@ C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Aklai.deps.json
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Aklai.runtimeconfig.json
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Aklai.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Aklai.pdb
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\login.baml
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\MainWindow.baml
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\profil.baml
-C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\regin.baml
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.g.resources
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.AssemblyInfoInputs.cache
@@ -52,7 +43,6 @@ C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\Aklai.csproj.CopyComplete
-C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Projects\Aklai\Aklai\bin\Debug\net6.0-windows\Npgsql.dll
 D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\Npgsql.dll
 D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
@@ -70,3 +60,12 @@ D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\login.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\MainWindow.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\profil.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\regin.baml
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\login.g.cs
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\MainWindow.g.cs
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\profil.g.cs
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\regin.g.cs
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\login.baml
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\MainWindow.baml
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\profil.baml
+C:\Projects\Aklai\Aklai\obj\Debug\net6.0-windows\View\regin.baml

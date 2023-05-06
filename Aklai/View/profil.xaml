@@ -8,11 +8,12 @@
       Title="profil" Height="1080" Width="1920">
     
     <Grid>
-        <Button Height="30" HorizontalAlignment="Right" x:Name="ex" Click="ex_Click" VerticalAlignment="Top" Width="30">
+        <Button Height="30" HorizontalAlignment="Right" x:Name="ExitButton" Click="Exite_Click" VerticalAlignment="Top" Width="30">
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/exit.png" />
                 </Button.Background>
-            </Button>
+        </Button>
+        
         <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="По типу:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="typeFilter" HorizontalAlignment="Left" Margin="73,45,0,0" VerticalAlignment="Top" Width="150">
@@ -22,14 +23,15 @@
         <Label Content="Поиск:" HorizontalAlignment="Left" Margin="228,41,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="nameFilter" Height="23" Margin="280,45,165,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <Button Click="ActiveFilter" Content="Применить фильтр" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
+        
         <ListView x:Name="sortList" Margin="10,73,10,10">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Тип" Width="150" DisplayMemberBinding="{Binding type}"/>
                     <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="Номинал" Width="120" DisplayMemberBinding="{Binding nome}"/>
-                    <GridViewColumn Header="Дата погашения" Width="100" DisplayMemberBinding="{Binding age}"/>
-                    <GridViewColumn Header="НКД" Width="100" DisplayMemberBinding="{Binding nkd}"/>
+                    <GridViewColumn Header="Номинал" Width="120" DisplayMemberBinding="{Binding nominal}"/>
+                    <GridViewColumn Header="Дата погашения" Width="100" DisplayMemberBinding="{Binding maturityDate}"/>
+                    <GridViewColumn Header="НКД" Width="100" DisplayMemberBinding="{Binding ACI}"/>
                 </GridView>
             </ListView.View>
         </ListView>

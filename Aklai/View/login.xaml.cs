@@ -19,8 +19,13 @@ namespace Aklai
             mainWindow = _mainWindow;
         }
 
+        public PasswordBox GetPasswordBox()
+        {
+            return password;
+        }
+
         // функция входа 
-        private void enter_Click(object sender, RoutedEventArgs e)
+        private void Enter_Click(object sender, RoutedEventArgs e)
         {
             if (textBox_login.Text.Length <= 0)
             {
@@ -43,13 +48,13 @@ namespace Aklai
             MessageBox.Show("Пользователь авторизовался");
             mainWindow.OpenPage(MainWindow.pages.profil);
             
-            Session currentSession = new Session();
+            Session currentSession = new Session(textBox_login.Text);
             MainWindow.session = currentSession;
             
         }
 
         // функция открытия регистрации 
-        private void regin_Click(object sender, RoutedEventArgs e) 
+        private void Regin_Click(object sender, RoutedEventArgs e) 
         {     
             mainWindow.OpenPage(MainWindow.pages.regin); 
         }

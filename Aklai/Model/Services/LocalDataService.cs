@@ -1,28 +1,23 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using Aklai.Data;
+using Aklai.Model.Data;
 using Npgsql;
 
-namespace Aklai.Data;
+namespace Aklai.Model.Services;
 
-public class DBHelper
+public class LocalDataService
 {
-    private const string DefaultConnStr =
-        "Host=kashin.db.elephantsql.com; Username=cnmdgcki; Password=YEp_z36TiQMoE0Hb1Kfo_rNxmM0ly5OM; Database=cnmdgcki";
-    private readonly string _connstr;
-
-    public DBHelper(string? connstr = null)
+    public async Task<bool> Autorize(string login, PasswordBox password)
     {
-        _connstr = connstr ?? DefaultConnStr;
-    }
-
-    public async Task<bool> CanAuth(string login, string password)
-    {
+        var db = new DBHelper();
+        
         const string loginParam = "login";
         const string passwordParam = "password";
         const string sqlQuery = $"SELECT * FROM \"public\".\"Users\" AS u WHERE u.\"login\"=@{loginParam} AND u.\"password\"=@{passwordParam} LIMIT 1";;
         
-        await using NpgsqlConnection conn = new(_connstr);
+        await using NpgsqlConnection conn = new(db._connstr);
         await using var command = conn.CreateCommand();
 
         command.CommandText = sqlQuery;
@@ -34,4 +29,5 @@ public class DBHelper
         var reader = command.ExecuteReader();
         return reader.HasRows;
     }
+
 }

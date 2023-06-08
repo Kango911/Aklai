@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lbgaPgk4x8KBtBQb2+Ba/3Yq7l9YSYvs3ZlaSdS/SppNpkyBPOvnK8cEkck6UB8lZ0E+F0Fcg0Qei67qWE0f4w==",
+  "dgSpecHash": "oSUyx7VW88ZeW0VR0Swyb9bYVU+N18zkMZjBNDHBgXnUBOqG8bfwc22wbHGXwbkiMxJNhkkSmlappi2RfI+aAA==",
   "success": true,
   "projectFilePath": "D:\\JetBrains\\Aklai\\Aklai\\Aklai.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lipen\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\lipen\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\lipen\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\lipen\\.nuget\\packages\\npgsql\\6.0.9\\npgsql.6.0.9.nupkg.sha512",

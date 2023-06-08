@@ -70,3 +70,4 @@ D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\login.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\MainWindow.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\profil.baml
 D:\JetBrains\Aklai\Aklai\obj\Debug\net6.0-windows\Pages\regin.baml
+D:\JetBrains\Aklai\Aklai\bin\Debug\net6.0-windows\CsvHelper.dll

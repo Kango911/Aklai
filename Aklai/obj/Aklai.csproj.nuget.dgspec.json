@@ -41,6 +41,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[6.0.9, )"

@@ -1,6 +1,27 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using CsvHelper;
+using System.Collections;
+using System.IO;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 
 namespace Aklai.Pages;
@@ -18,8 +39,12 @@ public partial class profil : Page
         InitializeComponent();
     
         // Добавляем данные
-        sort.Add(new Sort("Облигация", "ОФЗ 26242", "1000", "29-08-2029", "13.81 руб"));
+        
+        //sort.Add(new Sort("Облигация", "ОФЗ 26242", "1000", "29-08-2029", "13.81 руб"));
+        
 
+        IEnumerable<Sort> Dates = ReadCSV("D:\\Project\\Py\\Pars2\\indexes.csv");
+        
         LoadSort(sort); // выводим данные на экран
     }
     
@@ -45,6 +70,35 @@ public partial class profil : Page
             this.nkd = _nkd;
         }
     }
+    
+    public IEnumerable<Sort> ReadCSV(string fileName)
+    {
+        // We change file extension here to make sure it's a .csv file.
+        // TODO: Error checking.
+        string[] lines = File.ReadAllLines(fileName);
+ 
+ 
+        return lines.Select(line =>
+        {
+            string[] data = line.Split(';');
+            // We return a person with the data in order.
+            return new Sort(data[0], data[1], data[2], data[3], data[4]);
+        });
+    }
+ 
+      
+ 
+    public void Load_CSV(object sender, RoutedEventArgs e)
+    {
+        var file = _dialogService.OpenFileDialog(".csv", "Doc (.csv)|*.csv*");
+
+        if (!string.IsNullOrEmpty(file))
+        {
+            Dates = new ObservableCollection<Sort>(ReadCSV(file));
+        }
+ 
+    }
+    
     
     public List<Sort> sort = new List<Sort>();
     

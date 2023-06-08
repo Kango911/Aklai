@@ -33,5 +33,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="1010,47,0,0" VerticalAlignment="Top" Width="159" Height="34" Click="Load_CSV"/>
+        <TextBox x:Name="dirStr" HorizontalAlignment="Left" Height="23" Margin="1010,19,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="159"/>
     </Grid>
 </Page>

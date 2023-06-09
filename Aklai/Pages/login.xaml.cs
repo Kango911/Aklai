@@ -1,10 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using Aklai.Data;
-using Npgsql;
 
 namespace Aklai
 {

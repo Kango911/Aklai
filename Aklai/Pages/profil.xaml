@@ -25,15 +25,13 @@
         <ListView x:Name="sortList" Margin="10,73,10,10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Тип" Width="150" DisplayMemberBinding="{Binding type}"/>
+                    <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding type}"/>
                     <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="Номинал" Width="120" DisplayMemberBinding="{Binding nome}"/>
-                    <GridViewColumn Header="Дата погашения" Width="100" DisplayMemberBinding="{Binding age}"/>
-                    <GridViewColumn Header="НКД" Width="100" DisplayMemberBinding="{Binding nkd}"/>
+                    <GridViewColumn Header="Код" Width="120" DisplayMemberBinding="{Binding nome}"/>
+                    <GridViewColumn Header="Цена" Width="100" DisplayMemberBinding="{Binding age}"/>
+                    <GridViewColumn Header="Объем млн. руб." Width="100" DisplayMemberBinding="{Binding nkd}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="1010,47,0,0" VerticalAlignment="Top" Width="159" Height="34" Click="Load_CSV"/>
-        <TextBox x:Name="dirStr" HorizontalAlignment="Left" Height="23" Margin="1010,19,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="159"/>
     </Grid>
 </Page>

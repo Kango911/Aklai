@@ -39,13 +39,10 @@ public partial class profil : Page
         InitializeComponent();
     
         // Добавляем данные
-        
-        //sort.Add(new Sort("Облигация", "ОФЗ 26242", "1000", "29-08-2029", "13.81 руб"));
-        
 
-        IEnumerable<Sort> Dates = ReadCSV("D:\\Project\\Py\\Pars2\\indexes.csv");
+        List<Sort> Dates = ReadCSV("D:\\JetBrains\\Aklai\\Aklai\\indexes.csv").ToList();
         
-        LoadSort(sort); // выводим данные на экран
+        LoadSort(Dates); // выводим данные на экран
     }
     
     private void ex_Click(object sender, RoutedEventArgs e) 
@@ -81,32 +78,18 @@ public partial class profil : Page
         {
             string[] data = line.Split(';');
             return new Sort(data[0], data[1], data[2], data[3], data[4]);
+            
         });
     }
- 
-      
- 
-    public void Load_CSV(object sender, RoutedEventArgs e)
-    {
-        var file = _dialogService.OpenFileDialog(".csv", "Doc (.csv)|*.csv*");
-
-        if (!string.IsNullOrEmpty(file))
-        {
-            Dates = new ObservableCollection<Sort>(ReadCSV(file));
-        }
- 
-    }
-    
     
     public List<Sort> sort = new List<Sort>();
     
     public void LoadSort(List<Sort> _sort)
     {
-        sortList.Items.Clear(); // очищаем лист с элементами
     
-        for (int i = 0; i < _sort.Count; i++) // перебираем элементы
+        for (int i = 1; i < _sort.Count; i++)
         {
-            sortList.Items.Add(_sort[i]); // добавляем элементы в ListBox
+            sortList.Items.Add(_sort[i]);
         }
     }
     

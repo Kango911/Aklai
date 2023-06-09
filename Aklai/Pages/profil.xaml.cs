@@ -73,7 +73,6 @@ public partial class profil : Page
     
     public IEnumerable<Sort> ReadCSV(string fileName)
     {
-        // We change file extension here to make sure it's a .csv file.
         // TODO: Error checking.
         string[] lines = File.ReadAllLines(fileName);
  
@@ -81,7 +80,6 @@ public partial class profil : Page
         return lines.Select(line =>
         {
             string[] data = line.Split(';');
-            // We return a person with the data in order.
             return new Sort(data[0], data[1], data[2], data[3], data[4]);
         });
     }

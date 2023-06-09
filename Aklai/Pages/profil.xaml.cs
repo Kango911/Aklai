@@ -3,9 +3,13 @@ using System.Windows.Controls;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
+
 
 
 namespace Aklai.Pages;
+
+
 
 public partial class profil : Page
 {
@@ -18,10 +22,11 @@ public partial class profil : Page
         mainWindow = _mainWindow;
         
         InitializeComponent();
-    
+        
+
         // Добавляем данные
 
-        List<Sort> Dates = ReadCSV("D:\\JetBrains\\Aklai\\Aklai\\indexes.csv").ToList();
+        List<Sort> Dates = ReadCSV("C:\\Users\\lipen\\Desktop\\main\\indexes.csv").ToList();
         
         LoadSort(Dates); // выводим данные на экран
     }
@@ -52,7 +57,7 @@ public partial class profil : Page
     public IEnumerable<Sort> ReadCSV(string fileName)
     {
         // TODO: Error checking.
-        string[] lines = File.ReadAllLines(fileName);
+        string[] lines = File.ReadAllLines(fileName, Encoding.UTF8);
  
  
         return lines.Select(line =>

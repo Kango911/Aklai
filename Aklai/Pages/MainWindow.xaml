@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aklai"
         mc:Ignorable="d"
-        Title="Aklai" Height="1080" Width="1920">
+        Title="Aklai" Height="450" Width="800">
     <Grid>
         <Frame
             x:Name="frame" NavigationUIVisibility="Hidden"

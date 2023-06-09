@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Aklai"
       mc:Ignorable="d"
-      Title="profil" Height="1080" Width="1920">
+      Title="profil" Height="450" Width="800">
     
     <Grid>
-        <Button Height="30" HorizontalAlignment="Right" x:Name="ex" Click="ex_Click" VerticalAlignment="Top" Width="30">
+        <Button Height="30" HorizontalAlignment="Right" x:Name="ex" Click="ex_Click" VerticalAlignment="Top" Width="35">
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/exit.png" />
                 </Button.Background>

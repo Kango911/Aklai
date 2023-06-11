@@ -74,7 +74,7 @@ public class Parser
         
         for (int i = 0; i < input.Count - 18; i+=20)
         {
-            result.Add(new Sort(input[i],input[i+2],input[i+3],input[i+7], input[i+9]));
+            result.Add(new Sort(input[i],input[i+1],input[i+2],input[i+3],input[i+7], input[i+9]));
         }
 
         return result;

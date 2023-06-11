@@ -41,11 +41,11 @@ public partial class profil : Page
         
         string standartUrl = "https://smart-lab.ru/";
             
-        // List<string> parsedTabele = Parser.ParsTable("https://smart-lab.ru/q/shares/");
-        //
-        // List<Sort> elementList = Parser.CreareSort(parsedTabele);
-        //     
-        // Parser.WriteToCSV(elementList);
+        List<string> parsedTabele = Parser.ParsTable("https://smart-lab.ru/q/shares/");
+
+        List<Sort> elementList = Parser.CreareSort(parsedTabele);
+            
+        Parser.WriteToCSV(elementList);
         
         
         List<Sort> Dates = ReadCSV("indexes.csv").ToList();
@@ -71,7 +71,7 @@ public partial class profil : Page
         return lines.Select(line =>
         {
             string[] data = line.Split(';');
-            return new Sort(data[0], data[1], data[2], data[3], data[4],data[5]);
+            return new Sort(data[0], data[1], data[2], data[3], data[4]);
             
         });
     }

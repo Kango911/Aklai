@@ -6,8 +6,6 @@ public class Sort
 {
     [Name("ID")]
     public string number { get; set; }
-    [Name("Время")]
-    public string time { get; set; }
     [Name("Имя")]
     public string name { get; set; }
     [Name("Тикер")]
@@ -17,10 +15,9 @@ public class Sort
     [Name("Объём, млн. рублей")]
     public string volume { get; set; }
     
-    public Sort(string _number,string _time, string _name, string _ticker, string _price, string _volume)
+    public Sort(string _number, string _name, string _ticker, string _price, string _volume)
     {
         number = _number;
-        time = _time;
         name = _name;
         ticker = _ticker;
         price = _price;

@@ -21,15 +21,15 @@
         </ComboBox>
         <Label Content="Поиск:" HorizontalAlignment="Left" Margin="228,41,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="nameFilter" Height="23" Margin="280,45,165,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <Button Click="ActiveFilter" Content="Применить фильтр" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
+        <!-- <Button Click="ActiveFilter" Content="Применить фильтр" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/> -->
         <ListView x:Name="sortList" Margin="10,73,10,10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding type}"/>
+                    <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding number}"/>
                     <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="Код" Width="120" DisplayMemberBinding="{Binding nome}"/>
-                    <GridViewColumn Header="Цена" Width="100" DisplayMemberBinding="{Binding age}"/>
-                    <GridViewColumn Header="Объем млн. руб." Width="100" DisplayMemberBinding="{Binding nkd}"/>
+                    <GridViewColumn Header="Код" Width="120" DisplayMemberBinding="{Binding ticker}"/>
+                    <GridViewColumn Header="Цена" Width="100" DisplayMemberBinding="{Binding price}"/>
+                    <GridViewColumn Header="Объем млн. руб." Width="100" DisplayMemberBinding="{Binding volume}"/>
                 </GridView>
             </ListView.View>
         </ListView>

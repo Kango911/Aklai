@@ -35,7 +35,8 @@ namespace Aklai
                 MessageBox.Show("Пользователя не найден");
                 return;
             }
-            MessageBox.Show("Пользователь авторизовался");
+            MessageBox.Show("Пользователь авторизован! \n" +
+                            "Идет подгрузка актуальных данных!");
             mainWindow.OpenPage(MainWindow.pages.profil);
         }
 

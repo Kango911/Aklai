@@ -4,6 +4,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using Aklai.ParsF;
+using HtmlAgilityPack;
+using CsvHelper;
 
 
 
@@ -26,9 +35,26 @@ public partial class profil : Page
 
         // Добавляем данные
 
-        List<Sort> Dates = ReadCSV("C:\\Users\\lipen\\Desktop\\main\\indexes.csv").ToList();
+        
+        
+        
+        
+        string standartUrl = "https://smart-lab.ru/";
+            
+        List<string> parsedTabele = Parser.ParsTable("https://smart-lab.ru/q/shares/");
+
+        List<Sort> elementList = Parser.CreareSort(parsedTabele);
+            
+        Parser.WriteToCSV(elementList);
+        
+        
+        List<Sort> Dates = ReadCSV("indexes.csv").ToList();
         
         LoadSort(Dates); // выводим данные на экран
+        
+        //Parser.WriteToCSV(tabele);
+        
+        
     }
     
     private void ex_Click(object sender, RoutedEventArgs e) 
@@ -36,28 +62,10 @@ public partial class profil : Page
         mainWindow.OpenPage(MainWindow.pages.login); 
     }
 
-    public class Sort
-    {
-        public string type { get; set; }
-        public string name { get; set; }
-        public string nome { get; set; }
-        public string age { get; set; }
-        public string nkd { get; set; }
-    
-        public Sort(string _type, string _name, string _nome, string _age, string _nkd)
-        {
-            this.type = _type;
-            this.name = _name;
-            this.nome = _nome;
-            this.age = _age;
-            this.nkd = _nkd;
-        }
-    }
-    
     public IEnumerable<Sort> ReadCSV(string fileName)
     {
         // TODO: Error checking.
-        string[] lines = File.ReadAllLines(fileName, Encoding.UTF8);
+        string[] lines = File.ReadAllLines(fileName);
  
  
         return lines.Select(line =>
@@ -68,29 +76,13 @@ public partial class profil : Page
         });
     }
     
-    public List<Sort> sort = new List<Sort>();
     
     public void LoadSort(List<Sort> _sort)
     {
     
-        for (int i = 1; i < _sort.Count; i++)
+        for (int i = 2; i < _sort.Count; i++)
         {
             sortList.Items.Add(_sort[i]);
         }
-    }
-    
-    
-    private void ActiveFilter(object sender, RoutedEventArgs e)
-    {
-        List<Sort> newSort = new List<Sort>();
-        newSort = sort;
-    
-        if (typeFilter.SelectedIndex == 0)
-            newSort = sort.FindAll(x => x.type == "Акция");
-        else
-            newSort = sort.FindAll(x => x.type == "Облигация");
-    
-        LoadSort(newSort);
-        newSort = newSort.FindAll(x => x.name.Contains(nameFilter.Text));
     }
 }

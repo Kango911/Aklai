@@ -59,6 +59,7 @@ namespace Aklai
                             MessageBox.Show("Добавьте хотя бы одну цифру"); // выводим сообщение
                         if(en && symbol && number) // проверяем соответствие
                         {
+                            
                         }
                     } else MessageBox.Show("пароль слишком короткий, минимум 6 символов");
                     

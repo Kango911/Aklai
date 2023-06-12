@@ -14,7 +14,7 @@
                 </Button.Background>
         </Button>
         <!-- <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/> -->
-        <Label x:Name="log" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
+        <Label x:Name="log" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="150"/>
         <Label Content="По типу:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="typeFilter" HorizontalAlignment="Left" Margin="73,45,0,0" VerticalAlignment="Top" Width="150">
             <TextBlock>Акция</TextBlock>

@@ -13,12 +13,8 @@
                     <ImageBrush ImageSource="/Images/exit.png" />
                 </Button.Background>
         </Button>
-        <!-- <Button  x:Name="reload" Click="reload_Click" Margin="700, -410 10, 10" Width="32" Height="30" > -->
-        <!--     <Button.Background> -->
-        <!--         <ImageBrush ImageSource="/Images/reload.png" /> -->
-        <!--     </Button.Background> -->
-        <!-- </Button> -->
-        <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <!-- <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/> -->
+        <Label x:Name="log" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
         <Label Content="По типу:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="typeFilter" HorizontalAlignment="Left" Margin="73,45,0,0" VerticalAlignment="Top" Width="150">
             <TextBlock>Акция</TextBlock>

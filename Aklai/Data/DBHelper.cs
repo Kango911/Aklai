@@ -46,8 +46,6 @@ public class DBHelper
         const string loginParam = "login";
         const string passwordParam = "password";
         const string sqlQuery =
-            //$"INSERT INTO User (login, password) VALUES({loginParam}, {passwordParam})"; 
-
             $"INSERT INTO \"Users\" (login, password) VALUES (@{loginParam}, @{passwordParam})";        ;
 
         await using NpgsqlConnection conn = new(_connstr);
@@ -88,5 +86,26 @@ public class DBHelper
 
         var reader = command.ExecuteReader();
         return reader.HasRows;
+    }
+    
+    public async Task<User> FindUser(string login)
+    {
+        const string loginParam = "login";
+        const string sqlQuery =
+            $"SELECT \"Stocks\" FROM \"Users\" WHERE login = @{loginParam}";
+
+        await using NpgsqlConnection conn = new(_connstr);
+        await using var command = conn.CreateCommand();
+
+        command.CommandText = sqlQuery;
+        command.Parameters.AddWithValue(loginParam, login);
+
+        conn.Open();
+
+        var reader = command.ExecuteReader();
+        
+        
+        var result = reader.GetValue(0);
+        return null;
     }
 }

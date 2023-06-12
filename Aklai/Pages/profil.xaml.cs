@@ -10,6 +10,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Aklai.Data;
 using Aklai.ParsF;
 using HtmlAgilityPack;
 using CsvHelper;
@@ -23,14 +24,20 @@ namespace Aklai.Pages;
 public partial class profil : Page
 {
     public MainWindow mainWindow;
+    public string loginAuth;
     
     public profil(MainWindow _mainWindow)
     {
+
         InitializeComponent();
+
+        DBHelper help = new DBHelper();
+        help.FindUser("1");
         
         mainWindow = _mainWindow;
-        
-        InitializeComponent();
+        this.loginAuth = loginAuth;
+
+        log.Content = "Авторизованный пользователь: " + this.loginAuth;
         
 
         // Добавляем данные
@@ -84,4 +91,5 @@ public partial class profil : Page
             sortList.Items.Add(_sort[i]);
         }
     }
+    
 }

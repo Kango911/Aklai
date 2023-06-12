@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Aklai.ParsF;
 using Npgsql;
 
 namespace Aklai.Data;
@@ -55,6 +56,33 @@ public class DBHelper
         command.CommandText = sqlQuery;
         command.Parameters.AddWithValue(loginParam, login);
         command.Parameters.AddWithValue(passwordParam, password);
+
+        conn.Open();
+
+        var reader = command.ExecuteReader();
+        return reader.HasRows;
+    }
+
+    public async Task<bool> WriteStocks(Sort stock)
+    {
+        const string timeParm = "time";
+        const string nameParm = "name";
+        const string tickerParm = "ticker";
+        const string priceParm = "price";
+        const string volumeParm = "volume";
+
+        const string sqlQuery =
+            $"INSERT INTO \"Stocks\" (time, name, ticker, price, value) VALUES (@{timeParm}, @{nameParm}, @{tickerParm}, @{priceParm}, @{volumeParm})";
+
+        await using NpgsqlConnection conn = new(_connstr);
+        await using var command = conn.CreateCommand();
+        
+        command.CommandText = sqlQuery;
+        command.Parameters.AddWithValue(timeParm, stock.time);
+        command.Parameters.AddWithValue(nameParm, stock.name);
+        command.Parameters.AddWithValue(tickerParm, stock.ticker);
+        command.Parameters.AddWithValue(priceParm, stock.price);
+        command.Parameters.AddWithValue(volumeParm, stock.volume);
 
         conn.Open();
 

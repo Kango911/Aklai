@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using Aklai.Data;
 using CsvHelper;
 using CsvHelper.Configuration;
 using HtmlAgilityPack;
@@ -50,7 +51,16 @@ public class Parser
                                         }
                                     }
                                 }
-
+                                
+                                // for (int i = 0; i <= res.Count; i++)
+                                // {
+                                //     Sort stock = new Sort(res[i], res[i+1],res[i+2],res[i+3],res[i+7], res[i+9]);
+                                //     DBHelper dbHelper = new DBHelper();
+                                //     dbHelper.WriteStocks(stock);
+                                //
+                                // }
+                                
+                                
                                 return res;
                             }
                         }
@@ -76,7 +86,7 @@ public class Parser
         {
             result.Add(new Sort(input[i],input[i+1],input[i+2],input[i+3],input[i+7], input[i+9]));
         }
-
+    
         return result;
     }
 

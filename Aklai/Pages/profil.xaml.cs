@@ -42,7 +42,7 @@ public partial class profil : Page
         string standartUrl = "https://smart-lab.ru/";
             
         List<string> parsedTabele = Parser.ParsTable("https://smart-lab.ru/q/shares/");
-
+        
         List<Sort> elementList = Parser.CreareSort(parsedTabele);
             
         Parser.WriteToCSV(elementList);
@@ -52,8 +52,6 @@ public partial class profil : Page
         
         LoadSort(Dates); // выводим данные на экран
         
-        //Parser.WriteToCSV(tabele);
-        
         
     }
     
@@ -61,6 +59,7 @@ public partial class profil : Page
     {     
         mainWindow.OpenPage(MainWindow.pages.login); 
     }
+    
 
     public IEnumerable<Sort> ReadCSV(string fileName)
     {

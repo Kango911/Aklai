@@ -12,7 +12,7 @@
         <Label Content="Введите пароль:" HorizontalAlignment="Center" Margin="311,199,380,194"/>
         <PasswordBox x:Name="password"  Height="19" Margin="311, 200, 281, 176"/>
         <Label Content="Повторите пароль:" HorizontalAlignment="Center" Margin="311,245,370,154" />
-        <PasswordBox x:Name="password_Copy"  Height="19" Margin="311, 270, 281, 176"/>
+        <PasswordBox x:Name="password_Copy"  Height="19" Margin="311, 270, 281, 156"/>
         <Button x:Name="reg" Click="reg_Click" Content="Регистрация" HorizontalContentAlignment="Center" Margin="405, 315, 281, 115"/>
         <Button x:Name="back" Click="back_Click" Content="Отмена" HorizontalContentAlignment="Center" Margin="311, 315, 400, 115"/>
         <Image Source="/Images/Signature.png" Width="150" Height="125" HorizontalAlignment="Right" VerticalAlignment="Top" />

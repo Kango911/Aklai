@@ -12,6 +12,19 @@ namespace Aklai
             InitializeComponent();
 
             mainWindow = _mainWindow;
+            
+        }
+        
+        public string LoginedUser
+        {
+            get
+            {
+                return LoginedUser;
+            }
+            private set
+            {
+                
+            }
         }
 
         // функция входа 
@@ -32,12 +45,14 @@ namespace Aklai
             
             if (db.CanAuth(textBox_login.Text, password.Password).Result is false)   
             {
-                MessageBox.Show("Пользователя не найден");
+                MessageBox.Show("Пользователь не найден");
                 return;
             }
             MessageBox.Show("Пользователь авторизован! \n" +
                             "Идет подгрузка актуальных данных!");
+            LoginedUser = textBox_login.Text;
             mainWindow.OpenPage(MainWindow.pages.profil);
+            
         }
 
         // функция открытия регистрации 

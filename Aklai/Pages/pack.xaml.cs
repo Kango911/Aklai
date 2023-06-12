@@ -1,28 +1,21 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Windows.Automation;
+using System.Windows;
+using System.Windows.Controls;
 using Aklai.Data;
 using Aklai.ParsF;
 
-
-
 namespace Aklai.Pages;
 
-
-
-public partial class profil : Page
+public partial class pack : Page
 {
     public MainWindow mainWindow;
     public string loginAuth;
     
-    public profil(MainWindow _mainWindow, string loginAuth)
+    public pack(MainWindow _mainWindow)
     {
-
         InitializeComponent();
-
         DBHelper help = new DBHelper();
         help.FindUser("1");
         
@@ -31,41 +24,13 @@ public partial class profil : Page
 
         log.Content = this.loginAuth;
         
-
-        // Добавляем данные
-
-
-        
-        
-        
-        string standartUrl = "https://smart-lab.ru/";
-            
-        List<string> parsedTabele = Parser.ParsTable("https://smart-lab.ru/q/shares/");
-        
-        List<Sort> elementList = Parser.CreareSort(parsedTabele);
-            
-        Parser.WriteToCSV(elementList);
-        
-        
         List<Sort> Dates = ReadCSV("indexes.csv").ToList();
         
         LoadSort(Dates); // выводим данные на экран
         
-
-
     }
     
-    private void ex_Click(object sender, RoutedEventArgs e) 
-    {     
-        mainWindow.OpenPage(MainWindow.pages.login, null); 
-    }
     
-    private void pack_Click(object sender, RoutedEventArgs e) 
-    {     
-        mainWindow.OpenPage(MainWindow.pages.pack, loginAuth); 
-    }
-    
-
     public IEnumerable<Sort> ReadCSV(string fileName)
     {
         // TODO: Error checking.
@@ -90,4 +55,11 @@ public partial class profil : Page
         }
     }
     
+    
+    
+    
+    private void ex_Click(object sender, RoutedEventArgs e) 
+    {     
+        mainWindow.OpenPage(MainWindow.pages.profil, loginAuth); 
+    }
 }

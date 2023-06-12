@@ -26,6 +26,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding number}"/>
+                    <GridViewColumn Header="Время" Width="60" DisplayMemberBinding="{Binding time}"/>
                     <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding name}"/>
                     <GridViewColumn Header="Код" Width="120" DisplayMemberBinding="{Binding ticker}"/>
                     <GridViewColumn Header="Цена" Width="100" DisplayMemberBinding="{Binding price}"/>

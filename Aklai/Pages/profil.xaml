@@ -32,6 +32,7 @@
                     <GridViewColumn Header="Объем млн. руб." Width="100" DisplayMemberBinding="{Binding volume}"/>
                 </GridView>
             </ListView.View>
+            <!-- <Binding{></Binding> -->
         </ListView>
     </Grid>
 </Page>

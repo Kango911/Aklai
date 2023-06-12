@@ -10,7 +10,7 @@ namespace Aklai
         {
             InitializeComponent();
 
-            OpenPage(pages.login);
+            OpenPage(pages.login, null);
         }
 
         public enum pages
@@ -21,7 +21,7 @@ namespace Aklai
         }
 
 
-        public void OpenPage(pages pages)
+        public void OpenPage(pages pages, string? loginAuth)
         {
             if (pages == pages.login)
             {
@@ -29,7 +29,7 @@ namespace Aklai
             } else if (pages == pages.regin)
                 frame.Navigate(new regin(this));
             else if (pages == pages.profil)
-                frame.Navigate(new profil(this));
+                frame.Navigate(new profil(this, loginAuth));
             
         }
 

@@ -26,7 +26,7 @@ public partial class profil : Page
     public MainWindow mainWindow;
     public string loginAuth;
     
-    public profil(MainWindow _mainWindow)
+    public profil(MainWindow _mainWindow, string loginAuth)
     {
 
         InitializeComponent();
@@ -37,7 +37,7 @@ public partial class profil : Page
         mainWindow = _mainWindow;
         this.loginAuth = loginAuth;
 
-        log.Content = "Авторизованный пользователь: " + this.loginAuth;
+        log.Content = this.loginAuth;
         
 
         // Добавляем данные
@@ -64,7 +64,7 @@ public partial class profil : Page
     
     private void ex_Click(object sender, RoutedEventArgs e) 
     {     
-        mainWindow.OpenPage(MainWindow.pages.login); 
+        mainWindow.OpenPage(MainWindow.pages.login, null); 
     }
     
 

@@ -18,7 +18,7 @@ namespace Aklai
         //Возвращаемся назад
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.OpenPage(MainWindow.pages.login);
+            mainWindow.OpenPage(MainWindow.pages.login, null);
         }
         
         //Регистрация
@@ -78,7 +78,7 @@ namespace Aklai
                                 return;
                             }
                             MessageBox.Show("Пользователь зарегистрирован");
-                            mainWindow.OpenPage(MainWindow.pages.login); // открываем страницу авторизации
+                            mainWindow.OpenPage(MainWindow.pages.login, null); // открываем страницу авторизации
                             
                             
                             

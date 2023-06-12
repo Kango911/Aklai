@@ -16,8 +16,10 @@ public class Sort
     public string price { get; set; }
     [Name("Объём, млн. рублей")]
     public string volume { get; set; }
+    [Name("Изменение за год")]
+    public string changes { get; set; }
     
-    public Sort(string _number, string _time, string _name, string _ticker, string _price, string _volume)
+    public Sort(string _number, string _time, string _name, string _ticker, string _price, string _volume, string _changes)
     {
         number = _number;
         time = _time;
@@ -25,5 +27,6 @@ public class Sort
         ticker = _ticker;
         price = _price;
         volume = _volume;
+        changes = _changes;
     }
 }

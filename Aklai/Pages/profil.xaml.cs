@@ -68,7 +68,7 @@ public partial class profil : Page
         return lines.Select(line =>
         {
             string[] data = line.Split(';');
-            return new Sort(data[0], data[1], data[2], data[3], data[4], data[5]);
+            return new Sort(data[0], data[1], data[2], data[3], data[4], data[5], data[6]);
             
         });
     }

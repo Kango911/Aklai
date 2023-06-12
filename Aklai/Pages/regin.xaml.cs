@@ -1,5 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
+using Aklai.Data;
 
 namespace Aklai
 {
@@ -61,14 +62,26 @@ namespace Aklai
                         {
                             
                         }
-                    } else MessageBox.Show("пароль слишком короткий, минимум 6 символов");
+                    } else MessageBox.Show("Пароль слишком короткий, минимум 6 символов");
                     
                     if (password_Copy.Password.Length > 0) // проверяем второй пароль
                     {
                         if (password.Password == password_Copy.Password) // проверка на совпадение паролей
                         {
+                            
+                            
+                            var db = new DBHelper();
+            
+                            if (db.CanReg(textBox_login.Text, password.Password).Result)   
+                            {
+                                MessageBox.Show("Пользователь не зарегистрирован");
+                                return;
+                            }
                             MessageBox.Show("Пользователь зарегистрирован");
-                            mainWindow.OpenPage(MainWindow.pages.login); // открываем страницу профиль
+                            mainWindow.OpenPage(MainWindow.pages.login); // открываем страницу авторизации
+                            
+                            
+                            
                         }else MessageBox.Show("Пароли не совподают");
 
                     } else MessageBox.Show("Повторите пароль");

@@ -45,8 +45,9 @@ public class DBHelper
         const string loginParam = "login";
         const string passwordParam = "password";
         const string sqlQuery =
-            $"INSERT INTO \"public\".\"Users\" AS u WHERE u.\"login\"=@{loginParam} AND u.\"password\"=@{passwordParam} LIMIT 1";
-        ;
+            //$"INSERT INTO User (login, password) VALUES({loginParam}, {passwordParam})"; 
+
+            $"INSERT INTO \"Users\" (login, password) VALUES (@{loginParam}, @{passwordParam})";        ;
 
         await using NpgsqlConnection conn = new(_connstr);
         await using var command = conn.CreateCommand();

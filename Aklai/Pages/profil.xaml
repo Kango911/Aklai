@@ -14,15 +14,16 @@
                 </Button.Background>
         </Button>
         <!-- <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/> -->
-        <Label x:Name="log" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="По типу:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="typeFilter" HorizontalAlignment="Left" Margin="73,45,0,0" VerticalAlignment="Top" Width="150">
-            <TextBlock>Акция</TextBlock>
-            <TextBlock>Облигация</TextBlock>
-        </ComboBox>
-        <Label Content="Поиск:" HorizontalAlignment="Left" Margin="228,41,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nameFilter" Height="23" Margin="280,45,165,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <!-- <Button Click="ActiveFilter" Content="Применить фильтр" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/> -->
+        <Label x:Name="log" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="300"/>
+        <Button Click="ex_Click" Content="Портфель" HorizontalAlignment="Left" Margin="10,35,10,0" VerticalAlignment="Top" Width="150"/>
+        <!-- <Label Content="По типу:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/> -->
+        <!-- <ComboBox x:Name="typeFilter" HorizontalAlignment="Left" Margin="73,45,0,0" VerticalAlignment="Top" Width="150"> -->
+        <!--     <TextBlock>Акция</TextBlock> -->
+        <!--     <TextBlock>Облигация</TextBlock> -->
+        <!-- </ComboBox> -->
+        <!-- <Label Content="Поиск:" HorizontalAlignment="Left" Margin="228,41,0,0" VerticalAlignment="Top"/> -->
+        <!-- <TextBox x:Name="nameFilter" Height="23" Margin="280,45,165,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/> -->
+        <Button Click="ex_Click" Content="Добавить в портфель" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
         <ListView x:Name="sortList" Margin="10,73,10,10">
             <ListView.View>
                 <GridView>
@@ -34,7 +35,6 @@
                     <GridViewColumn Header="Объем млн. руб." Width="100" DisplayMemberBinding="{Binding volume}"/>
                 </GridView>
             </ListView.View>
-            <!-- <Binding{></Binding> -->
         </ListView>
     </Grid>
 </Page>

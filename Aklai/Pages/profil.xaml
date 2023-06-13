@@ -13,7 +13,8 @@
                     <ImageBrush ImageSource="/Images/exit.png" />
                 </Button.Background>
         </Button>
-        <Button x:Name="BackButton" Content="Вернусться" Click="GoBack" HorizontalAlignment="Left" Margin="170,35,10,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Вернусться" Click="GoBack" HorizontalAlignment="Left" Margin="170,35,10,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Удалить" Click="RemoveStock" HorizontalAlignment="Left" Margin="330,35,10,0" VerticalAlignment="Top" Width="150"/>
         <!-- <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/> -->
         <Label x:Name="log" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="300"/>
         <Button Click="ShowYourStocks"  Content="Портфель" HorizontalAlignment="Left" Margin="10,35,10,0" VerticalAlignment="Top" Width="150"/>

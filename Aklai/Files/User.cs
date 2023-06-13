@@ -7,7 +7,7 @@ public class User
 {
     public string Login;
     public string Password;
-    public List<Sort> Stocks = new List<Sort>(){};
+    public List<Stock> Stocks = new List<Stock>(){};
 
     public User(string login, string password)
     {
@@ -15,8 +15,13 @@ public class User
         Password = password;
     }
 
-    public void AddStock(Sort stock)
+    public void AddStock(Stock stock)
     {
         Stocks.Add(stock);
+    }
+    
+    public void RemoveStock(Stock stock)
+    {
+        Stocks.Remove(stock);
     }
 }

@@ -11,7 +11,7 @@ public partial class profil : Page
 {
     public MainWindow mainWindow;
     public User authUser;
-    private List<Sort> Dates;
+    private List<Stock> Dates;
     
     public profil(MainWindow _mainWindow, User user)
     {
@@ -33,7 +33,7 @@ public partial class profil : Page
             
         List<string> parsedTabele = Parser.ParsTable("https://smart-lab.ru/q/shares/");
         
-        List<Sort> elementList = Parser.CreareSort(parsedTabele);
+        List<Stock> elementList = Parser.CreareSort(parsedTabele);
 
         parser.WriteStocksToDB(elementList);
         parser.WriteToCSV(elementList);
@@ -61,7 +61,7 @@ public partial class profil : Page
         mainWindow.OpenPage(MainWindow.pages.login, null); 
     }
 
-    public IEnumerable<Sort> ReadCSV(string fileName)
+    public IEnumerable<Stock> ReadCSV(string fileName)
     {
         // TODO: Error checking.
         string[] lines = File.ReadAllLines(fileName);
@@ -70,7 +70,7 @@ public partial class profil : Page
         return lines.Select(line =>
         {
             string[] data = line.Split(';');
-            return new Sort(data[0], data[1], data[2], data[3], data[4], data[5]);
+            return new Stock(data[0], data[1], data[2], data[3], data[4], data[5]);
             
         });
     }
@@ -81,7 +81,7 @@ public partial class profil : Page
     }
     
     
-    public void LoadSort(List<Sort> _sort)
+    public void LoadSort(List<Stock> _sort)
     {
         sortList.Items.Clear();
     
@@ -89,6 +89,11 @@ public partial class profil : Page
         {
             sortList.Items.Add(_sort[i]);
         }
+    }
+    public void RemoveStock(object sender, RoutedEventArgs e)
+    {
+        authUser.RemoveStock(authUser.Stocks[sortList.SelectedIndex]);
+        LoadSort(authUser.Stocks);
     }
     
 }

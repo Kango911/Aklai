@@ -3,7 +3,7 @@ using CsvHelper.Configuration.Attributes;
 
 namespace Aklai.ParsF;
 
-public class Sort 
+public class Stock 
 {
     [Name("ID")]
     public string number { get; set; }
@@ -18,7 +18,7 @@ public class Sort
     [Name("Объём, млн. рублей")]
     public string volume { get; set; }
     
-    public Sort(string _number, string _time, string _name, string _ticker, string _price, string _volume)
+    public Stock(string _number, string _time, string _name, string _ticker, string _price, string _volume)
     {
         number = _number;
         time = _time;

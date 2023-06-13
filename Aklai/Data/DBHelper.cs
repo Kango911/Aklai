@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Aklai.ParsF;
 using Npgsql;
 
@@ -56,7 +57,7 @@ public class DBHelper
         return reader.HasRows;
     }
 
-    public async Task<bool> WriteStocks(Sort stock)
+    public async Task<Stock> WriteStocks(Stock stock)
     {
         const string timeParm = "buy_time";
         const string nameParm = "stock_name";
@@ -80,10 +81,10 @@ public class DBHelper
         conn.Open();
 
         var reader = command.ExecuteReader();
-        return reader.HasRows;
+        return null; //reader.HasRows;
     }
     
-    public async Task<User> FindUser(string login)
+    public async Task<int> GetUserID(string login)
     {
         const string loginParam = "login";
         const string sqlQuery =
@@ -101,10 +102,10 @@ public class DBHelper
         
         
         var result = reader.GetValue(0);
-        return null;
+        return -1;
     }
 
-    public async Task<bool> GetStocks()
+    public async Task<List<Stock>> GetAllStocks()
     {
         const string sqlQuery =
             $"SELECT * FROM \"public\".\"stocks\"";
@@ -118,6 +119,47 @@ public class DBHelper
         
 
         var reader = command.ExecuteReader();
-        return reader.HasRows;
+        return null;
+    }
+
+    public async Task<List<Stock>> GetUsersStoks(int userId)
+    {
+        const string user_IDParam = "login";
+        
+        const string sqlQuery =
+            $"SELECT \"stock_ticker\" FROM \"users_stocks\" WHERE user_id = \"@{user_IDParam}\"";
+        
+        await using NpgsqlConnection conn = new(_connstr);
+        await using var command = conn.CreateCommand();
+
+        command.CommandText = sqlQuery;
+        command.Parameters.AddWithValue(user_IDParam, userId);
+
+        conn.Open();
+        
+
+        var reader = command.ExecuteReader();
+        return null; //reader.HasRows;
+    }
+
+    public async Task AddStockToBackpack(int userId, Stock stock)
+    {
+        const string user_IDParm = "login";
+        const string tickerParm = "ticker";
+        
+        const string sqlQuery =
+            $"INSERT INTO \"users_stocks\" (user_id, stock_ticker) VALUES (\"@{user_IDParm}\", \"@{tickerParm}\")";
+        
+        await using NpgsqlConnection conn = new(_connstr);
+        await using var command = conn.CreateCommand();
+
+        command.CommandText = sqlQuery;
+        command.Parameters.AddWithValue(user_IDParm, userId);
+
+        conn.Open();
+        
+
+        var reader = command.ExecuteReader();
+        return; //reader.HasRows;
     }
 }

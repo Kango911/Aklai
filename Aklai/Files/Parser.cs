@@ -72,19 +72,19 @@ public class Parser
         return null;
     }
 
-    public static List<Sort> CreareSort(List<string> input)
+    public static List<Stock> CreareSort(List<string> input)
     {
-        List<Sort> result = new List<Sort>();
+        List<Stock> result = new List<Stock>();
         
         for (int i = 40; i < input.Count - 18; i+=20)
         {
-            result.Add(new Sort(input[i],input[i+1],input[i+2],input[i+3],input[i+7], input[i+9]));
+            result.Add(new Stock(input[i],input[i+1],input[i+2],input[i+3],input[i+7], input[i+9]));
         }
     
         return result;
     }
 
-    public async void WriteStocksToDB(List<Sort> input)
+    public async void WriteStocksToDB(List<Stock> input)
     {
         DBHelper dbHelper = new DBHelper();
 
@@ -97,7 +97,7 @@ public class Parser
         });
     }
 
-    public void WriteToCSV(List<Sort> tabel)
+    public void WriteToCSV(List<Stock> tabel)
     {
         using (var writer = new StreamWriter("indexes.csv", false, Encoding.UTF8 ))
         {
@@ -109,4 +109,6 @@ public class Parser
             }
         }
     }
+    
+    
 }

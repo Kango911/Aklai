@@ -21,7 +21,7 @@ namespace Aklai
         }
 
 
-        public void OpenPage(pages pages, string? loginAuth)
+        public void OpenPage(pages pages, User? loginAuth)
         {
             if (pages == pages.login)
             {
@@ -30,6 +30,7 @@ namespace Aklai
                 frame.Navigate(new regin(this));
             else if (pages == pages.profil)
                 frame.Navigate(new profil(this, loginAuth));
+            
         }
 
 

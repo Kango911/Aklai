@@ -21,8 +21,7 @@ public class DBHelper
         const string loginParam = "login";
         const string passwordParam = "password";
         const string sqlQuery =
-            $"SELECT * FROM \"public\".\"Users\" AS u WHERE u.\"login\"=@{loginParam} AND u.\"password\"=@{passwordParam} LIMIT 1";
-        ;
+            $"SELECT * FROM \"public\".\"users\" AS u WHERE u.\"login\"=@{loginParam} AND u.\"password\"=@{passwordParam} LIMIT 1";
 
         await using NpgsqlConnection conn = new(_connstr);
         await using var command = conn.CreateCommand();
@@ -36,15 +35,13 @@ public class DBHelper
         var reader = command.ExecuteReader();
         return reader.HasRows;
     }
-
     
-
     public async Task<bool> CanReg(string login, string password)
     {
         const string loginParam = "login";
         const string passwordParam = "password";
         const string sqlQuery =
-            $"INSERT INTO \"Users\" (login, password) VALUES (@{loginParam}, @{passwordParam})";        ;
+            $"INSERT INTO \"users\" (login, password) VALUES (@{loginParam}, @{passwordParam})";
 
         await using NpgsqlConnection conn = new(_connstr);
         await using var command = conn.CreateCommand();
@@ -61,14 +58,14 @@ public class DBHelper
 
     public async Task<bool> WriteStocks(Sort stock)
     {
-        const string timeParm = "time";
-        const string nameParm = "name";
+        const string timeParm = "buy_time";
+        const string nameParm = "stock_name";
         const string tickerParm = "ticker";
         const string priceParm = "price";
         const string volumeParm = "volume";
 
         const string sqlQuery =
-            $"INSERT INTO \"Stocks\" (time, name, ticker, price, value) VALUES (@{timeParm}, @{nameParm}, @{tickerParm}, @{priceParm}, @{volumeParm})";
+            $"INSERT INTO \"stocks\" (buy_time, stock_name, ticker, price, volume) VALUES (@{timeParm}, @{nameParm}, @{tickerParm}, @{priceParm}, @{volumeParm})";
 
         await using NpgsqlConnection conn = new(_connstr);
         await using var command = conn.CreateCommand();
@@ -90,7 +87,7 @@ public class DBHelper
     {
         const string loginParam = "login";
         const string sqlQuery =
-            $"SELECT \"Stocks\" FROM \"Users\" WHERE login = @{loginParam}";
+            $"SELECT \"Stocks\" FROM \"users\" WHERE login = @{loginParam}";
 
         await using NpgsqlConnection conn = new(_connstr);
         await using var command = conn.CreateCommand();
@@ -105,5 +102,22 @@ public class DBHelper
         
         var result = reader.GetValue(0);
         return null;
+    }
+
+    public async Task<bool> GetStocks()
+    {
+        const string sqlQuery =
+            $"SELECT * FROM \"public\".\"stocks\"";
+
+        await using NpgsqlConnection conn = new(_connstr);
+        await using var command = conn.CreateCommand();
+
+        command.CommandText = sqlQuery;
+
+        conn.Open();
+        
+
+        var reader = command.ExecuteReader();
+        return reader.HasRows;
     }
 }

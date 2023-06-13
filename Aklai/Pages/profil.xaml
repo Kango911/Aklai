@@ -8,14 +8,15 @@
       Title="profil" Height="450" Width="800">
     
     <Grid>
-        <Button Height="30" HorizontalAlignment="Right" x:Name="ex" Click="ex_Click" VerticalAlignment="Top" Width="35">
+        <Button Height="30" HorizontalAlignment="Right" x:Name="ex" Click="ex_Click" VerticalAlignment="Top" Width="55">
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/exit.png" />
                 </Button.Background>
         </Button>
+        <Button x:Name="BackButton" Content="Вернусться" Click="GoBack" HorizontalAlignment="Left" Margin="170,35,10,0" VerticalAlignment="Top" Width="150"/>
         <!-- <Label Content="Фильтровать:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/> -->
         <Label x:Name="log" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="300"/>
-        <Button Click="ex_Click" Content="Портфель" HorizontalAlignment="Left" Margin="10,35,10,0" VerticalAlignment="Top" Width="150"/>
+        <Button Click="ShowYourStocks"  Content="Портфель" HorizontalAlignment="Left" Margin="10,35,10,0" VerticalAlignment="Top" Width="150"/>
         <!-- <Label Content="По типу:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/> -->
         <!-- <ComboBox x:Name="typeFilter" HorizontalAlignment="Left" Margin="73,45,0,0" VerticalAlignment="Top" Width="150"> -->
         <!--     <TextBlock>Акция</TextBlock> -->
@@ -23,17 +24,16 @@
         <!-- </ComboBox> -->
         <!-- <Label Content="Поиск:" HorizontalAlignment="Left" Margin="228,41,0,0" VerticalAlignment="Top"/> -->
         <!-- <TextBox x:Name="nameFilter" Height="23" Margin="280,45,165,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/> -->
-        <Button Click="ex_Click" Content="Добавить в портфель" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
+        <Button Click="AddStock" Content="Добавить в портфель" HorizontalAlignment="Right" Margin="0,45,10,0" VerticalAlignment="Top" Width="150"/>
         <ListView x:Name="sortList" Margin="10,73,10,10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding number}" />
+                    <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding number}"/>
                     <GridViewColumn Header="Время" Width="60" DisplayMemberBinding="{Binding time}"/>
                     <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding name}"/>
                     <GridViewColumn Header="Код" Width="120" DisplayMemberBinding="{Binding ticker}"/>
                     <GridViewColumn Header="Цена" Width="100" DisplayMemberBinding="{Binding price}"/>
-                    <GridViewColumn Header="Объем млн. руб." Width="120" DisplayMemberBinding="{Binding volume}"/>
-                    <GridViewColumn Header="Изменение за год в %" Width="140" DisplayMemberBinding="{Binding changes}"/>
+                    <GridViewColumn Header="Объем млн. руб." Width="100" DisplayMemberBinding="{Binding volume}"/>
                 </GridView>
             </ListView.View>
         </ListView>

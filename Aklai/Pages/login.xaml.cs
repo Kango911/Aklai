@@ -7,7 +7,6 @@ namespace Aklai
     public partial class login : Page
     {
         public MainWindow mainWindow;
-        public string loginAuth;
         public login(MainWindow _mainWindow)
         {
             InitializeComponent();
@@ -40,8 +39,8 @@ namespace Aklai
             }
             MessageBox.Show("Пользователь авторизован! \n" +
                             "Идет подгрузка актуальных данных!");
-            loginAuth = textBox_login.Text;
-            mainWindow.OpenPage(MainWindow.pages.profil, loginAuth);
+            
+            mainWindow.OpenPage(MainWindow.pages.profil, new User(textBox_login.Text, password.Password));
             
         }
 

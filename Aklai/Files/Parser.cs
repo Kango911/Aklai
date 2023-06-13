@@ -5,6 +5,8 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
+using Aklai.Data;
 using CsvHelper;
 using CsvHelper.Configuration;
 using HtmlAgilityPack;
@@ -15,11 +17,11 @@ public class Parser
 {
     public static List<string> ParsTable(string url)
     {
-        try
-        {
-            var res = new List<string>();
-
-            using (HttpClientHandler hdl = new HttpClientHandler{ AllowAutoRedirect = false, AutomaticDecompression = DecompressionMethods.All })
+        var res = new List<string>();
+        
+        try{
+            using (HttpClientHandler hdl = new HttpClientHandler
+                       {AllowAutoRedirect = false, AutomaticDecompression = DecompressionMethods.All})
             {
                 using (HttpClient client = new HttpClient(hdl))
                 {
@@ -34,9 +36,11 @@ public class Parser
                                 doc.LoadHtml(html);
 
 
-                                var table = doc.DocumentNode.SelectSingleNode("/html/body/div[1]/div/div[6]/div/div/div[2]");
-                                if (table != null){
-                                    
+                                var table = doc.DocumentNode.SelectSingleNode(
+                                    "/html/body/div[1]/div/div[6]/div/div/div[2]");
+                                if (table != null)
+                                {
+
                                     var tbl = table.SelectSingleNode("//table");
                                     if (tbl != null)
                                     {
@@ -44,22 +48,14 @@ public class Parser
                                         {
                                             foreach (var cell in cells)
                                             {
-                                                if(cell.InnerText != "Как выбрать брокера?" && cell.InnerText != "Рейтинг брокеров")
+                                                if (cell.InnerText != "Как выбрать брокера?" &&
+                                                    cell.InnerText != "Рейтинг брокеров")
                                                     res.Add(cell.InnerText);
                                             }
                                         }
                                     }
                                 }
-                                
-                                // for (int i = 0; i <= res.Count; i++)
-                                // {
-                                //     Sort stock = new Sort(res[i], res[i+1],res[i+2],res[i+3],res[i+7], res[i+9]);
-                                //     DBHelper dbHelper = new DBHelper();
-                                //     dbHelper.WriteStocks(stock);
-                                //
-                                // }
-                                
-                                
+
                                 return res;
                             }
                         }
@@ -73,7 +69,6 @@ public class Parser
             Console.WriteLine(ex.Message);
             throw;
         }
-
         return null;
     }
 
@@ -81,15 +76,28 @@ public class Parser
     {
         List<Sort> result = new List<Sort>();
         
-        for (int i = 0; i < input.Count - 18; i+=20)
+        for (int i = 40; i < input.Count - 18; i+=20)
         {
-            result.Add(new Sort(input[i],input[i+1],input[i+2],input[i+3],input[i+7], input[i+9], input[i+13]));
+            result.Add(new Sort(input[i],input[i+1],input[i+2],input[i+3],input[i+7], input[i+9]));
         }
     
         return result;
     }
 
-    public static void WriteToCSV(List<Sort> tabel)
+    public async void WriteStocksToDB(List<Sort> input)
+    {
+        DBHelper dbHelper = new DBHelper();
+
+        await Task.Run(() =>
+        {
+            foreach (var stock in input)
+            {
+                dbHelper.WriteStocks(stock);
+            }
+        });
+    }
+
+    public void WriteToCSV(List<Sort> tabel)
     {
         using (var writer = new StreamWriter("indexes.csv", false, Encoding.UTF8 ))
         {

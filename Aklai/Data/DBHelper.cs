@@ -7,6 +7,7 @@ namespace Aklai.Data;
 
 public class DBHelper
 {
+    private static int maxUserPK = 14;
     private const string DefaultConnStr =
         "Host=kashin.db.elephantsql.com; Username=cnmdgcki; Password=YEp_z36TiQMoE0Hb1Kfo_rNxmM0ly5OM; Database=cnmdgcki";
 
@@ -34,6 +35,7 @@ public class DBHelper
         conn.Open();
 
         var reader = command.ExecuteReader();
+
         return reader.HasRows;
     }
     
@@ -42,7 +44,7 @@ public class DBHelper
         const string loginParam = "login";
         const string passwordParam = "password";
         const string sqlQuery =
-            $"INSERT INTO \"users\" (login, password) VALUES (@{loginParam}, @{passwordParam})";
+            $"INSERT INTO \"users\" (login, password) VALUES (@{loginParam}, @{passwordParam})RETURNING id";
 
         await using NpgsqlConnection conn = new(_connstr);
         await using var command = conn.CreateCommand();
@@ -50,6 +52,8 @@ public class DBHelper
         command.CommandText = sqlQuery;
         command.Parameters.AddWithValue(loginParam, login);
         command.Parameters.AddWithValue(passwordParam, password);
+
+        maxUserPK++;
 
         conn.Open();
 

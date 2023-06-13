@@ -1,9 +1,13 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Aklai.ParsF;
+using CsvHelper;
+using CsvHelper.Configuration;
 
 namespace Aklai.Pages;
 
@@ -42,6 +46,7 @@ public partial class profil : Page
         
         // выводим данные на экран
         LoadSort(Dates);
+        GetUsersStocks();
         
     }
 
@@ -51,14 +56,23 @@ public partial class profil : Page
         MessageBox.Show("Акция добавлена в портфель");
     }
 
+    public void RemoveStock(object sender, RoutedEventArgs e)
+    {
+        authUser.RemoveStock(authUser.Stocks[sortList.SelectedIndex]);
+        LoadSort(authUser.Stocks);
+    }
+
     public void GoBack(object sender, RoutedEventArgs e)
     {
         LoadSort(Dates);
     }
 
     private void ex_Click(object sender, RoutedEventArgs e) 
-    {     
-        mainWindow.OpenPage(MainWindow.pages.login, null); 
+    { 
+        
+        SaveUsersStocks();
+
+        mainWindow.OpenPage(MainWindow.pages.login, null);
     }
 
     public IEnumerable<Stock> ReadCSV(string fileName)
@@ -79,8 +93,7 @@ public partial class profil : Page
     {
         LoadSort(authUser.Stocks);
     }
-    
-    
+
     public void LoadSort(List<Stock> _sort)
     {
         sortList.Items.Clear();
@@ -90,10 +103,32 @@ public partial class profil : Page
             sortList.Items.Add(_sort[i]);
         }
     }
-    public void RemoveStock(object sender, RoutedEventArgs e)
+
+    public void GetUsersStocks()
     {
-        authUser.RemoveStock(authUser.Stocks[sortList.SelectedIndex]);
-        LoadSort(authUser.Stocks);
+        if (!File.Exists($"indexes{authUser.Login}.csv"))
+        {
+            File.Create($"indexes{authUser.Login}.csv");
+        }
+        else
+        {
+            authUser.Stocks = ReadCSV($"indexes{authUser.Login}.csv").ToList();
+        }
+    }
+
+    public void SaveUsersStocks()
+    {
+        File.WriteAllText($"indexes{authUser.Login}.csv", string.Empty);
+
+        using (var writer = new StreamWriter($"indexes{authUser.Login}.csv", false, Encoding.UTF8 ))
+        {
+            var csvConfig = new CsvConfiguration(CultureInfo.GetCultureInfo("ru-RU")) {Delimiter = ";", HasHeaderRecord = false};
+            
+            using (var csvWriter = new CsvWriter(writer, csvConfig))
+            {
+                csvWriter.WriteRecords(authUser.Stocks);
+            }
+        }
     }
     
 }

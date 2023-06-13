@@ -101,7 +101,7 @@ public class Parser
     {
         using (var writer = new StreamWriter("indexes.csv", false, Encoding.UTF8 ))
         {
-            var csvConfig = new CsvConfiguration(CultureInfo.GetCultureInfo("ru-RU")) {Delimiter = ";"};
+            var csvConfig = new CsvConfiguration(CultureInfo.GetCultureInfo("ru-RU")) {Delimiter = ";", HasHeaderRecord = false};
             
             using (var csvWriter = new CsvWriter(writer, csvConfig))
             {
@@ -109,6 +109,4 @@ public class Parser
             }
         }
     }
-    
-    
 }

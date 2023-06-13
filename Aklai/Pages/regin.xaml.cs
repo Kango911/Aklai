@@ -72,7 +72,7 @@ namespace Aklai
                             
                             var db = new DBHelper();
             
-                            if (db.CanReg(textBox_login.Text, password.Password).Result)   
+                            if (!db.CanReg(textBox_login.Text, password.Password).Result)   
                             {
                                 MessageBox.Show("Пользователь не зарегистрирован");
                                 return;

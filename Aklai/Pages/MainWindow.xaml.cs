@@ -17,8 +17,7 @@ namespace Aklai
         {
             login,
             regin,
-            profil,
-            pack
+            profil
         }
 
 
@@ -31,9 +30,6 @@ namespace Aklai
                 frame.Navigate(new regin(this));
             else if (pages == pages.profil)
                 frame.Navigate(new profil(this, loginAuth));
-            else if (pages == pages.pack)
-                frame.Navigate(new pack(this));
-            
         }
 
 

@@ -60,11 +60,6 @@ public partial class profil : Page
         mainWindow.OpenPage(MainWindow.pages.login, null); 
     }
     
-    private void pack_Click(object sender, RoutedEventArgs e) 
-    {     
-        mainWindow.OpenPage(MainWindow.pages.pack, loginAuth); 
-    }
-    
 
     public IEnumerable<Sort> ReadCSV(string fileName)
     {
